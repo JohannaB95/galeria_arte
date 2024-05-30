@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  
+  <title>Galería de Arte</title>
+  <script src="funcionalidad.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+      <nav class="navbar navbar-expand-lg container-fluid d-flex align-items-center justify-content-around">
+          <img src="./images/logo.png" alt="logo, slogan" class="logotitulo me-auto">
+          <div class="d-flex align-items-center justify-content-between w-100 flex-wrap">
+              <form class="d-flex ms-auto" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-suscribirse" type="submit">Buscar</button>
+              </form>
+              <div class="d-none d-lg-flex align-items-center ms-auto">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link active" id="inicio" aria-current="page" href="#">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link nav-a" href="#seccion1">Sobre nosotros</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Explorar
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item nava" href="#seccion2">Eventos</a></li>
+                              <li><a class="dropdown-item nava" href="#seccion3">Obras</a></li>
+                              <li><a class="dropdown-item nava" href="#seccion4">Artistas</a></li>
+                              <li><a class="dropdown-item nava" href="#seccion5">Novedades</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item nava" href="./formulario.html">Inscripción Eventos</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="d-lg-none ms-auto">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+              </div>
+          </div>
+      </nav>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menú</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" id="inicio" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link nav-a" href="#seccion1">Sobre nosotros</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Explorar
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item nava" href="#seccion2">Eventos</a></li>
+                          <li><a class="dropdown-item nava" href="#seccion3">Obras</a></li>
+                          <li><a class="dropdown-item nava" href="#seccion4">Artistas</a></li>
+                          <li><a class="dropdown-item nava" href="#seccion5">Novedades</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item nava" href="./formulario.html">Inscripción Eventos</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </header>
+
+  <main>
+    <h1 class="titulo4" id="seccion1">Nuestra Galería</h1>
+    <div class="contenedorimg">
+      <article class="article">
+        <img class="imgprin1" src="./images/img1.jpg" alt="">
+        <div class="texto2">
+          <p class="letra"><strong>Bienvenidos a la Galería de Arte Ukiyo-e y Zen:</strong></p>
+          <p class="letra">
+            Sumérgete en el fascinante mundo del arte japonés tradicional en nuestra galería dedicada al
+            ukiyo-e y el arte zen. Nuestra colección reúne obras emblemáticas de maestros como Hokusai
+            y Hiroshige, transportándote a la elegancia y serenidad de la naturaleza y la vida cotidiana en
+            el antiguo Japón.
+          </p>
+        </div>
+      </article>
+
+      <article class="article">
+        <img class="imgprin1" src="./images/img2.jpg" alt="">
+        <div class="texto2">
+          <p class="letra"><strong>Eventos y Exposiciones:</strong></p>
+          <p class="letra">
+            Descubre una variedad de eventos emocionantes que ofrecemos regularmente. Desde exposiciones
+            temporales de artistas contemporáneos hasta retrospectivas de los grandes maestros del ukiyo-e,
+            nuestra galería es un espacio dinámico donde el arte japonés cobra vida. Además, no te pierdas
+            nuestras conferencias y charlas impartidas por expertos en el tema.
+          </p>
+        </div>
+      </article>
+
+      <article class="article">
+        <img class="imgprin1" src="./images/img3.jpg" alt="">
+        <div class="texto2">
+          <p class="letra"><strong>Cursos y Talleres:</strong></p>
+          <p class="letra">
+            En Art Gallery, también nos enorgullecemos de ofrecer cursos y talleres para aquellos interesados
+            en aprender más sobre esta rica tradición artística. Desde clases de caligrafía y pintura sumi-e
+            hasta talleres de grabado en madera, nuestros programas educativos están diseñados para
+            brindarte una experiencia inmersiva y educativa en el arte japonés.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <hr class="linea-separadora">
+
+    <h6 class="titulo4" id="seccion2">Eventos</h6>
+    <section class="contenedor-testimonios">
+
+      <article>
+        <div class="card border-primary mb-3 card-test" style="max-width: 18rem;">
+          <div class="card-header bg-transparent border-primary mes-evento">Junio:</div>
+          <div class="card-body text-primary">
+            <h6 class="card-title name-evento" id="nombre-evento">"Paisajes del Edo"</h6>
+            <p class="card-text">Detalles: Exhibición de paisajes urbanos y rurales de Edo, con obras de Hiroshige y
+              Hokusai.</p>
+          </div>
+          <div class="card-footer bg-transparent border-primary mes-evento">Fecha: 15-30 de junio</div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-success btn-suscribirse"
+                onclick="inscripcionEvento(document.getElementById('nombre-evento').textContent)">Inscribirme</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="card border-primary mb-3 card-test" style="max-width: 18rem;">
+          <div class="card-header bg-transparent border-primary mes-evento">Julio:</div>
+          <div class="card-body text-primary">
+            <h6 class="card-title name-evento" id="nombre-evento2">"Belleza Femenina en Ukiyo-e"</h6>
+            <p class="card-text">Detalles: Retratos de mujeres por artistas como Utamaro y Harunobu.</p>
+          </div>
+          <div class="card-footer bg-transparent border-primary mes-evento">Fecha: 1-15 de julio</div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-success btn-suscribirse"
+                onclick="inscripcionEvento(document.getElementById('nombre-evento2').textContent)">Inscribirme</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="card border-primary mb-3 card-test" style="max-width: 18rem;">
+          <div class="card-header bg-transparent border-primary mes-evento">Agosto:</div>
+          <div class="card-body text-primary">
+            <h6 class="card-title name-evento1" id="nombre-evento3">"El Zen en la Pintura"</h6>
+            <p class="card-text1">Detalles: Obras de maestros Zen como Hakuin Ekaku y Sesshū Tōyō, enfocadas en la
+              meditación.</p>
+          </div>
+          <div class="card-footer bg-transparent border-primary mes-evento">Fecha: 10-25 de agosto</div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-success btn-suscribirse"
+                onclick="inscripcionEvento(document.getElementById('nombre-evento3').textContent)">Inscribirme</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="card border-primary mb-3 card-test" style="max-width: 18rem;">
+          <div class="card-header bg-transparent border-primary mes-evento">Septiembre:</div>
+          <div class="card-body text-primary">
+            <h6 class="card-title name-evento" id="nombre-evento4">"Samuráis y Guerreros"</h6>
+            <p class="card-text">Detalles: Pinturas y grabados que retratan la vida y la valentía de los samuráis.</p>
+          </div>
+          <div class="card-footer bg-transparent border-primary">Fecha: 5-20 de septiembre</div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-success btn-suscribirse"
+                onclick="inscripcionEvento(document.getElementById('nombre-evento4').textContent)">Inscribirme</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <hr class="linea-separadora">
+
+    <h2 class="titulo4">Ukiyo-e y Arte Zen</h2>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/carrusel/img1.jpg" class="d-block img-carrusel" alt="...">
+          <div class="carousel-caption txt-img-carr">
+            <h3 class="letra-carrusel"><strong>Introducción al Ukiyo-e</strong></h3>
+            <p class="letra-carrusel">
+              El Ukiyo-e, que literalmente significa "pinturas del mundo flotante", es un estilo de arte japonés
+              que se originó en el período Edo (1603-1868). Este arte se caracteriza por sus impresiones en madera,
+              que retratan escenas de la vida cotidiana, paisajes, actores kabuki y figuras históricas. El Ukiyo-e
+              refleja
+              la cultura y las costumbres de la sociedad japonesa de la época, capturando la belleza efímera y
+              cambiante del mundo.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/carrusel/img2.jpg" class="d-block img-carrusel" alt="...">
+          <div class="carousel-caption txt-img-carr">
+            <h3 class="letra-carrusel"><strong>Características del Ukiyo-e:</strong></h3>
+            <p class="letra-carrusel">
+              Las obras de Ukiyo-e se destacan por su uso vívido del color, la composición dinámica y el detalle
+              meticuloso. Los artistas ukiyo-e, como Hokusai y Hiroshige, dominaron la técnica de la xilografía
+              para crear impresiones que transmiten emociones, atmósferas y narrativas fascinantes. Esta forma
+              de arte influyó profundamente en movimientos artísticos posteriores, como el impresionismo en
+              Europa.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/carrusel/img3.jpg" class="d-block img-carrusel" alt="...">
+          <div class="carousel-caption txt-img-carr">
+            <h3 class="letra-carrusel"><strong>El Arte Zen y su Influencia:</strong></h3>
+            <p class="letra-carrusel">
+              El arte zen, por otro lado, se centra en la esencia de la simplicidad, la tranquilidad y la conexión
+              con la naturaleza y la espiritualidad. Los monjes zen han practicado durante siglos la caligrafía, la
+              pintura y la jardinería zen como expresiones de su búsqueda de la iluminación y la armonía interior.
+              Estas obras reflejan la filosofía zen de vivir en el momento presente y encontrar la belleza en la
+              simplicidad.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/carrusel/img4.jpg" class="d-block img-carrusel" alt="...">
+          <div class="carousel-caption txt-img-carr">
+            <h3 class="letra-carrusel"><strong>Encuentro de Ukiyo-e y Arte Zen:</strong></h3>
+            <p class="letra-carrusel">
+              La fusión del Ukiyo-e y el arte zen ha dado lugar a obras fascinantes que combinan la elegancia
+              estética de la impresión japonesa con la serenidad y profundidad del arte zen. Esta convergencia
+              creativa ha producido piezas que trascienden lo meramente visual, invitando al espectador a
+              contemplar la vida, la naturaleza y la espiritualidad desde una perspectiva renovada.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/carrusel/img5.jpg" class="d-block img-carrusel" alt="...">
+          <div class="carousel-caption txt-img-carr">
+            <h3 class="letra-carrusel"><strong>Explorando la Página de Arte:</strong></h3>
+            <p class="letra-carrusel">
+              En esta página dedicada al Ukiyo-e y al arte zen de Japón, podrás explorar una colección única de
+              obras maestras, aprender sobre los artistas destacados de este género, descubrir la influencia del
+              arte japonés en el mundo occidental y sumergirte en la belleza y la profundidad de estas expresiones
+              artísticas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+
+    <hr class="linea-separadora">
+
+    <h2 class="titulo4" id="seccion3">Obras destacadas</h2>
+    <h3 class="sub-obras">Obras emblemáticas de Ukiyo-e:</h3>
+    <div class="contenedor">
+      <div class="col cursos-dis">
+        <div class="card shadow-sm">
+          <img class="img-obras" src="./images/obras/img1.jpg" alt="Imagen 1">
+          <div class="card-body">
+            <p class="card-text">La gran ola de Kanagawa</p>
+            <p class="card-text"><strong>Autor: </strong>Katsushika Hokusai</p><br>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn-sm boton1">Más información</button>
+              </div>
+            </div>
+          </div>
+          <div class="collapse">
+            <div class="card-body">
+              <p class="descripcion-obras"><b><i>Descripción:</i></b> Esta icónica obra muestra una enorme ola
+                amenazando a
+                pequeños botes, con el monte Fuji en el fondo. Es parte de la serie "Treinta y seis vistas del
+                monte Fuji".</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col cursos-dis">
+        <div class="card shadow-sm">
+          <img class="img-obras" src="./images/obras/img2.jpg" alt="Imagen 2">
+          <div class="card-body">
+            <p class="card-text">El monte Fuji rojo</p>
+            <p class="card-text"><strong>Autor: </strong>Katsushika Hokusai</p><br>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn-sm boton1">Más información</button>
+              </div>
+            </div>
+          </div>
+          <div class="collapse">
+            <div class="card-body">
+              <p class="descripcion-obras"><b><i>Descripción:</i></b> Representa el monte Fuji bajo la luz del amanecer,
+                teñido
+                de rojo. También es parte de la serie "Treinta y seis vistas del monte Fuji".</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col cursos-dis">
+        <div class="card shadow-sm">
+          <img class="img-obras" src="./images/obras/img3.jpg" alt="Imagen 3">
+          <div class="card-body">
+            <p class="card-text">Nieve en Kambara</p>
+            <p class="card-text"><strong>Autor: </strong>Utagawa Hiroshige</p><br>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn-sm boton1">Más información</button>
+              </div>
+            </div>
+          </div>
+          <div class="collapse">
+            <div class="card-body">
+              <p class="descripcion-obras"><b><i>Descripción:</i></b> Muestra una escena invernal tranquila con tres
+                viajeros
+                caminando bajo la nieve. Pertenece a la serie "Cincuenta y tres estaciones de Tōkaidō".</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col cursos-dis">
+        <div class="card shadow-sm">
+          <img class="img-obras" src="./images/obras/img4.jpg" alt="Imagen 4">
+          <div class="card-body">
+            <p class="card-text1">El puente Ōhashi en Atake bajo una lluvia repentina</p>
+            <p class="card-text1"><strong>Autor: </strong>Utagawa Hiroshige</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn-sm boton1">Más información</button>
+              </div>
+            </div>
+          </div>
+          <div class="collapse">
+            <div class="card-body">
+              <p class="descripcion-obras"><b><i>Descripción:</i></b> Retrata a transeúntes bajo una lluvia torrencial
+                en el puente Ōhashi. Es parte de la serie "Cien vistas famosas de Edo".</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="sub-obras">Obras emblemáticas del arte Zen:</h3>
+    <div class="contenedor">
+      <div class="col cursos-dis">
+        <div class="card shadow-sm">
+          <img class="img-obras" src="./images/obras/img5.jpg" alt="Imagen 5">
+          <div class="card-body">
+            <p class="card-text">El círculo ensō</p>
+            <p class="card-text"><strong>Autor: </strong>monjes Zen</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn-sm boton1">Más información</button>
+              </div>
+            </div>
+          </div>
+          <div class="collapse">
+            <div class="card-body">
+              <p class="descripcion-obras"><b><i>Descripción:</i></b> Un círculo pintado con una sola pincelada
+                continua, simboliza
+                iluminación y armonía.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col cursos-dis">
+        <div class="card shadow-sm">
+          <img class="img-obras" src="./images/obras/img6.jpg" alt="Imagen 6">
+          <div class="card-body">
+            <p class="card-text">Bosque de bambúes</p>
+            <p class="card-text"><strong>Autor: </strong>Hakuin Ekaku</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn-sm boton1">Más información</button>
+              </div>
+            </div>
+          </div>
+          <div class="collapse">
+            <div class="card-body">
+              <p class="descripcion-obras"><b><i>Descripción:</i></b> Representa un denso bosque de bambúes,
+                simbolizando
+                resistencia y flexibilidad en la práctica Zen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col cursos-dis">
+        <div class="card shadow-sm">
+          <img class="img-obras" src="./images/obras/img7.jpg" alt="Imagen 7">
+          <div class="card-body">
+            <p class="card-text">La montaña y el agua</p>
+            <p class="card-text"><strong>Autor: </strong>Sesshū Tōyō</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn-sm boton1">Más información</button>
+              </div>
+            </div>
+          </div>
+          <div class="collapse">
+            <div class="card-body">
+              <p class="descripcion-obras"><b><i>Descripción:</i></b> Muestra la armonía entre montañas y agua,
+                elementos
+                esenciales en la filosofía Zen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col cursos-dis">
+        <div class="card shadow-sm">
+          <img class="img-obras" src="./images/obras/img8.jpg" alt="Imagen 8">
+          <div class="card-body">
+            <p class="card-text">Pájaros y flores en cuatro estaciones</p>
+            <p class="card-text"><strong>Autor: </strong>Sesson Shūkei</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn-sm boton1">Más información</button>
+              </div>
+            </div>
+          </div>
+          <div class="collapse">
+            <div class="card-body">
+              <p class="descripcion-obras"><b><i>Descripción:</i></b> Captura la belleza de la naturaleza a lo largo del
+                año, reflejando la transitoriedad de la vida.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="linea-separadora">
+
+    <h3 class="titulo4" id="seccion3">Videos Ukiyo-e y Arte Zen</h3>
+    <section class="videos">
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/S7fkJ0f9API?si=fN2zL7W6adx5xNZv"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vd88rB76ViA?si=Y6p3PmUf3rMVIqM9"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <hr class="linea-separadora">
+
+    <h1 class="titulo4" id="seccion5">Novedades de la galería</h1>
+    <section class="infovarias">
+
+      <ul class="menu">
+        <li class="barralat"><img class="iconos" src="./images/iconois.png" alt=""><a class="letrabl" href="">Quiénes
+            somos</a></li>
+        <li class="barralat"><img class="iconos" src="./images/iconoqs.png" alt=""><a class="letrabl"
+            href="">Colaboradores</a></li>
+        <li class="barralat"><img class="iconos" src="./images/iconopin.png" alt=""><a class="letrabl" href="">Cursos de
+            pintura</a></li>
+        <li class="barralat"><img class="iconos" src="./images/iconoesc.png" alt=""><a class="letrabl" href="">Cursos de
+            escultura</a></li>
+        <li class="barralat"><img class="iconos" src="./images/iconodib.png" alt=""><a class="letrabl" href="">Cursos de
+            dibujo</a></li>
+        <li class="barralat"><img class="iconos" src="./images/iconoexp.png" alt=""><a class="letrabl" href="">Nuestras
+            exposiciones</a></li>
+      </ul>
+      <article class="primeranuncio">
+        <img class="imgprin" src="./images/anuncio.jpg" alt="">
+        <div class="overlay">
+          <div class="texto">Conoce sobre nuestros cursos.</div>
+          <div><button class="boton1">Saber más</button></div>
+        </div>
+      </article>
+
+      <article class="segundoanuncio">
+        <img class="imgprin" src="./images/anuncio2.jpg" alt="">
+        <div class="overlay">
+          <div class="texto">Conoce donde comprar los mejores materiales para tus proyectos.</div>
+          <div><button class="boton1">Saber más</button></div>
+        </div>
+      </article>
+
+      <article class="terceranuncio">
+        <img class="imgprin" src="./images/expo.jpg" alt="">
+        <div class="overlay">
+          <div class="texto">Informate sobre los horarios de nuestras exposiciones y todos los eventos del mes.</div>
+          <div><button class="boton1">Saber más</button></div>
+        </div>
+      </article>
+
+      <article class="cuartoanuncio">
+        <img class="imgprin" src="./images/artdigital.jpg" alt="">
+        <div class="overlay">
+          <div class="texto">Enterate de todas las novedes y noticias del mundo del arte con nuestra aplicación móvil,
+            disponible para android y IOs.</div>
+          <div><button class="boton1">Saber más</button></div>
+        </div>
+      </article>
+
+      <article class="quintoanuncio">
+        <img class="imgprin" src="./images/concurso.jpg" alt="">
+        <div class="overlay">
+          <div class="texto">Proximamente abriremos la convocatoria para nuestro curso anual de Nuevos Talentos.</div>
+          <div><button class="boton1">Saber más</button></div>
+        </div>
+      </article>
+
+      <article class="sextoanuncio">
+        <img class="imgprin" src="./images/redes.jpg" alt="">
+        <div class="overlay">
+          <div class="texto">No te olvides de visitar nuestras redes sociales y conocer sobre todo lo que tenemos para
+            ti.</div>
+          <div><button class="boton1">Saber más</button></div>
+        </div>
+      </article>
+    </section>
+
+    <hr class="linea-separadora">
+
+    <h3 class="titulo4">Últimas novedades en el arte</h3>
+    <section class="articulos">
+
+      <div class="imagen-container">
+        <img src="./images/pintura.jpg" alt="Imagen 1" class="imagen1">
+        <div class="overlay">
+          <div class="texto">Exposiciones de arte profesionales y de principiantes.</div>
+        </div>
+      </div>
+      <article id="article1">
+        <h4 class="titulos-ulnov">"Descubierta una Pintura Perdida de un Maestro Renacentista en una Antigua Mansión"
+        </h4>
+        <div class="imgarticle" id="imgart1"></div>
+        <p class="art-ulnov">En una emocionante revelación para el mundo del arte, arqueólogos descubrieron una pintura
+          perdida del renombrado maestro renacentista <strong>Giovanni Bellini. </strong>La obra, titulada "Madonna con
+          el Niño",
+          se encontraba oculta detrás de una pared en una antigua mansión italiana durante una renovación.
+          Los expertos creen que esta obra maestra del siglo XV captura la esencia del período renacentista y
+          arroja nueva luz sobre la técnica y la visión artística de Bellini.</p>
+        <button class="boton">Ver más</button>
+      </article>
+      <article id="article2">
+        <h4 class="titulos-ulnov">Inauguración de la Exposición de Arte Contemporáneo "Reflejos Urbanos"</h4>
+        <div class="imgarticle" id="imgart2"></div>
+        <p class="art-ulnov">La vibrante ciudad acoge una nueva ola de expresión artística con la apertura de la
+          exposición
+          <strong>"Reflejos Urbanos"</strong>en la Galería Metropolitana. Esta cautivadora muestra presenta obras de
+          destacados
+          artistas contemporáneos que exploran la interacción entre el entorno urbano y la experiencia humana.
+          Desde graffiti hasta instalaciones multimedia, cada pieza invita al espectador a reflexionar sobre la
+          complejidad y la belleza de la vida en la ciudad moderna.
+        </p>
+        <button class="boton">Ver más</button>
+      </article>
+      <div class="imagen-container">
+        <img src="./images/dibujo.jpg" alt="Imagen 1" class="imagen2">
+        <div class="overlay">
+          <div class="texto">Clases de dibujo y pintura, desde principiante hasta profesional.</div>
+        </div>
+      </div>
+
+      <div class="imagen-container">
+        <img src="./images/esculturas.jpg" alt="Imagen 1" class="imagen3">
+        <div class="overlay">
+          <div class="texto">Exposiciones de esculturas y diferentes tipos de arte</div>
+        </div>
+      </div>
+
+      <article id="article3">
+        <h4 class="titulos-ulnov">Street Art en Ascenso: Transformando Ciudades en Galerías al Aire Libre</h4>
+        <div class="imgarticle" id="imgart3"></div>
+        <p class="art-ulnov">Desde los callejones oscuros hasta los muros de los edificios más emblemáticos, el arte
+          callejero
+          está dejando una marca indeleble en las ciudades de todo el mundo. Con su espíritu audaz y su
+          mensaje provocativo, los artistas callejeros están transformando entornos urbanos en vibrantes galerías
+          al aire libre. Esta forma de arte contemporáneo desafía las convenciones y trae la expresión artística
+          directamente a las calles.</p>
+        <button class="boton">Ver más</button>
+      </article>
+      <div class="imagen-container">
+        <img src="./images/reflejo.jpg" alt="Imagen 1" class="imagen4">
+        <div class="overlay">
+          <div class="texto">El arte es el reflejo del alma humana, capturado en lienzo.</div>
+        </div>
+      </div>
+
+      <article id="article4">
+        <h4 class="titulos-ulnov">Arte Digital: Explorando Nuevas Fronteras Creativas</h4>
+        <div class="imgarticle" id="imgart4"></div>
+        <p class="art-ulnov">El mundo del arte se está expandiendo hacia lo digital con una explosión de creatividad sin
+          precedentes.
+          Desde esculturas en realidad virtual hasta pinturas generadas por inteligencia artificial, los artistas
+          están explorando nuevas formas de expresión en el mundo digital. Esta fusión de tecnología y arte
+          promete redefinir los límites de la creatividad y la imaginación en el siglo XXI.</p>
+        <button class="boton">Ver más</button>
+      </article>
+
+      <div class="imagen-container">
+        <img src="./images/trazo.jpg" alt="Imagen 1" class="imagen5">
+        <div class="overlay">
+          <div class="texto">Explora la belleza oculta en cada trazo y color.</div>
+        </div>
+      </div>
+
+      <article id="article4">
+        <h4 class="titulos-ulnov">Inauguración de la Exposición de Ukiyo-e en el Museo de Arte Contemporáneo</h4>
+        <div class="imgarticle" id="imgart6"></div>
+        <p class="art-ulnov">El Museo de Arte Contemporáneo ha inaugurado hoy una exposición dedicada al 
+          Ukiyo-e, el icónico estilo de grabado japonés del período Edo. La muestra incluye obras maestras de 
+          Hokusai y Hiroshige, ofreciendo una mirada única a la vida y paisajes del Japón del siglo XVIII. La exposición 
+          estará abierta al público hasta el 30 de septiembre, ofreciendo además talleres y charlas sobre la influencia 
+          del Ukiyo-e en el arte moderno.</p>
+        <button class="boton">Ver más</button>
+      </article>
+
+      <article id="article5">
+        <h4 class="titulos-ulnov">La influencia del arte en la sociedad moderna</h4>
+        <div class="imgarticle" id="imgart5"></div>
+        <p class="art-ulnov">El arte ha desempeñado un papel fundamental en la sociedad a lo largo de la historia, pero
+          su
+          influencia en la sociedad moderna es más relevante que nunca. Desde desafiar las normas sociales
+          hasta promover la conciencia cultural y política, el arte tiene el poder de provocar pensamientos,
+          emociones y conversaciones que pueden cambiar el curso de la historia. En un mundo cada vez
+          más conectado y globalizado, el arte actúa como un puente entre diferentes culturas y perspectivas,
+          fomentando la comprensión y el diálogo entre las personas de todo el mundo.</p>
+        <button class="boton">Ver más</button>
+      </article>
+    </section>
+
+    <hr class="linea-separadora">
+    <h2 class="titulo4" id="seccion4">Artistas Destacados</h2>
+    <div class="contenedor1">
+      <div class="card">
+        <div class="galeria">
+          <img class="img" src="./images/artistas/img1.jpg" alt="Artista 1">
+          <h3 class="card-text">Artista:</h3>
+          <p class="card-text">Katsushika Hokusai (1760-1849)</p>
+          <div><button class="btn-sm boton1">Más detalles</button></div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <p class="descripcion-obras"><b><i>Obra Famosa: </i></b> "La gran ola de Kanagawa".
+              <strong>Contribuciones:</strong> Su serie "Treinta y seis vistas del Monte Fuji" es icónica,
+              redefiniendo el ukiyo-e con su enfoque en paisajes y naturaleza. Además de sus impresiones,
+              Hokusai creó manuales de dibujo y pinturas de diversos. <br>
+              <strong>Estilo:</strong> Detallado y dinámico, capturando la esencia de la naturaleza con un estilo
+              distintivo.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="galeria">
+          <img class="img" src="./images/artistas/img2.jpg" alt="Artista 2">
+          <h3 class="card-text">Artista:</h3>
+          <p class="card-text">Utagawa Hiroshige (1797-1858)</p>
+          <div><button class="btn-sm boton1">Más detalles</button></div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <p class="descripcion-obras"><b><i>Obra Famosa: </i></b> "Cien famosas vistas de Edo".
+              <strong>Contribuciones:</strong> Hiroshige capturó la belleza de paisajes urbanos y naturales.
+              Sus composiciones y uso del color son distintivos, influenciando a muchos artistas posteriores,
+              incluidos los impresionistas europeos. <br>
+              <strong>Estilo:</strong> Paisajes serenos y coloridos, con un enfoque en la atmósfera y la luz.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="galeria">
+          <img class="img" src="./images/artistas/img3.jpg" alt="Artista 3">
+          <h3 class="card-text">Artista:</h3>
+          <p class="card-text">Kitagawa Utamaro (1753-1806)</p>
+          <div><button class="btn-sm boton1">Más detalles</button></div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <p class="descripcion-obras"><b><i>Especialidad: </i></b> Retratos de mujeres (bijin-ga).
+              <strong>Contribuciones:</strong> Utamaro destacó por su habilidad para representar la belleza
+              femenina, reflejando la elegancia y la moda de la época. Sus obras fueron muy populares en
+              su tiempo y aún son apreciadas en la actualidad.<br>
+              <strong>Estilo:</strong> Líneas delicadas y detalladas, capturando la gracia y la feminidad.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="galeria">
+          <img class="img" src="./images/artistas/img4.jpg" alt="Artista 4">
+          <h3 class="card-text">Artista:</h3>
+          <p class="card-text">Toshusai Sharaku (activo entre 1794-1795)</p>
+          <div><button class="btn-sm boton1">Más detalles</button></div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <p class="descripcion-obras"><b><i>Especialidad: </i></b> Retratos de actores kabuki.
+              <strong>Contribuciones:</strong> Sharaku es famoso por su estilo único y expresividad en
+              sus representaciones. Aunque su carrera fue corta, dejó un legado significativo en el arte del
+              retrato y la representación teatral.<br>
+              <strong>Estilo:</strong> Expresivo y dramático, destacando las emociones y características de los actores.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="galeria">
+          <img class="img" src="./images/artistas/img5.jpg" alt="Artista 5">
+          <h3 class="card-text">Artista:</h3>
+          <p class="card-text">Kawanabe Kyōsai (1831-1889)</p>
+          <div><button class="btn-sm boton1">Más detalles</button></div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <p class="descripcion-obras"><b><i>Especialidad: </i></b> Caricatura y sátira.
+              <strong>Contribuciones:</strong> Kyōsai era un artista versátil que abordaba una amplia
+              gama de temas en su obra, incluyendo humor y crítica social. Su estilo humorístico y a menudo
+              satírico lo convirtió en una figura destacada en el mundo del ukiyo-e.<br>
+              <strong>Estilo:</strong> Innovador y versátil, con un enfoque en la crítica social y el humor.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="galeria">
+          <img class="img" src="./images/artistas/img6.jpg" alt="Artista 6">
+          <h3 class="card-text">Artista:</h3>
+          <p class="card-text">Hakuin Ekaku (1686-1769)</p>
+          <div><button class="btn-sm boton1">Más detalles</button></div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <p class="descripcion-obras"><b><i>Especialidad: </i></b> Dibujos de ensō (círculos).
+              <strong>Contribuciones:</strong> Monje Zen y pintor, Hakuin es conocido por sus ensō que
+              simbolizan la iluminación y la naturaleza impermanente de la existencia. También creó obras
+              humorísticas y filosóficas que reflejan su profundo conocimiento del budismo Zen.<br>
+              <strong>Estilo:</strong> Simplicidad y profundidad, con un enfoque en la espiritualidad y la filosofía
+              Zen.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="galeria">
+          <img class="img" src="./images/artistas/img7.jpg" alt="Artista 7">
+          <h3 class="card-text">Artista:</h3>
+          <p class="card-text">Sesshū Tōyō (1420-1506)</p>
+          <div><button class="btn-sm boton1">Más detalles</button></div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <p class="descripcion-obras"><b><i>Especialidad: </i></b> Pintura a tinta.
+              <strong>Contribuciones:</strong> Sesshū es famoso por sus paisajes que combinan la influencia
+              china con la estética Zen japonesa. Su habilidad para capturar la esencia de la naturaleza y la
+              espiritualidad Zen lo convirtió en una figura destacada en la historia del arte japonés.<br>
+              <strong>Estilo:</strong> Elegante y contemplativo, con un enfoque en la naturaleza y la espiritualidad.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="galeria">
+          <img class="img" src="./images/artistas/img8.jpg" alt="Artista 8">
+          <h3 class="card-text">Artista:</h3>
+          <p class="card-text">Sesson Shūkei (1504-1589)</p>
+          <div><button class="btn-sm boton1">Más detalles</button></div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <p class="descripcion-obras"><b><i>Especialidad: </i></b> Paisajes y retratos.
+              <strong>Contribuciones:</strong> Pintor Zen cuyo trabajo abarca paisajes, retratos y temas
+              religiosos. Sus obras reflejan la simplicidad y la profundidad de la práctica Zen, con una atención
+              especial a la conexión entre la naturaleza y la espiritualidad.<br>
+              <strong>Estilo:</strong> Minimalista y meditativo, destacando la conexión entre el hombre y la naturaleza.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="galeria">
+          <img class="img" src="./images/artistas/img9.jpg" alt="Artista 9">
+          <h3 class="card-text">Artista:</h3>
+          <p class="card-text">Mokuan Reien (activo en el siglo XIV)</p>
+          <div><button class="btn-sm boton1">Más detalles</button></div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <p class="descripcion-obras"><b><i>Especialidad: </i></b> Pinturas de tinta.
+              <strong>Contribuciones:</strong> Conocido por sus pinturas de tinta que representan la síntesis
+              del budismo y la estética Zen. Sus obras a menudo muestran escenas de la vida cotidiana
+              imbuidas de significado espiritual y contemplativo.<br>
+              <strong>Estilo:</strong> Sencillo y profundo, con un enfoque en la vida cotidiana y la espiritualidad.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="galeria">
+          <img class="img" src="./images/artistas/img10.jpg" alt="Artista 10">
+          <h3 class="card-text">Artista:</h3>
+          <p class="card-text">Tōhaku Hasegawa (1539-1610)</p>
+          <div><button class="btn-sm boton1">Más detalles</button></div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <p class="descripcion-obras"><b><i>Especialidad: </i></b> Pintura de paisajes y naturaleza.
+              <strong>Contribuciones:</strong> Maestro en la creación de biombos y pinturas murales,
+              Tōhaku Hasegawa es conocido por su uso magistral del espacio negativo y su capacidad para
+              capturar la tranquilidad de la naturaleza en sus obras.<br>
+              <strong>Estilo:</strong> Sereno y equilibrado, con un enfoque en la simplicidad y el uso del espacio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h5>Contacto</h5>
+          <ul class="list-unstyled">
+            <li>Teléfono: +1 (123) 456-7890</li>
+            <li>Correo: info@artgallery.com</li>
+            <li>Dirección: Av. Principal #123, Ciudad</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h5>Enlaces</h5>
+          <ul class="list-unstyled">
+            <li><a class="a-footer" href="#">Inicio</a></li>
+            <li><a class="a-footer" href="#">Cursos</a></li>
+            <li><a class="a-footer" href="#">Nosotros</a></li>
+            <li><a class="a-footer" href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h5>Suscríbete</h5>
+          <p class="letra-f">Recibe las últimas actualizaciones y otros contenidos.</p>
+          <div class="input-group mb-3">
+            <form action="#" method="POST">
+              <input type="email" class="form-control1" placeholder="Correo electrónico" aria-label="Correo electrónico"
+                aria-describedby="basic-addon2" required>
+              <button class="btn btn-suscribirse" type="submit">Suscribirse</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center mt-3">
+        <div class="col">
+          <p class="letra-f">&copy; 2024 Art Gallery. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
