@@ -43,50 +43,29 @@ function desplegarDetalles(event) {
     document.getElementById('formulario-inscripcion').addEventListener('submit', function (e) {
       e.preventDefault();
   
-      let evento = document.getElementById('nombre-evento').textContent;
-      let nombre = document.getElementById('nombre').value;
-      let apellido = document.getElementById('apellido').value;
-      let documento = document.getElementById('documento').value;
-      let email = document.getElementById('email').value;
-      let celular = document.getElementById('celular').value;
-      let fecha = document.getElementById('fecha').value;
-      let interes1 = document.getElementById('interes1').checked ? "Sí" : "No";
-      let interes2 = document.getElementById('interes2').checked ? "Sí" : "No";
-  
-      document.getElementById('nombreEventoResultado').innerText = "Nombre del Evento: " + evento;
-      document.getElementById('nombreResultado').innerText = "Nombre: " + nombre;
-      document.getElementById('apellidoResultado').innerText = "Apellido: " + apellido;
-      document.getElementById('documentoResultado').innerText = "Documento: " + documento;
-      document.getElementById('emailResultado').innerText = "Email: " + email;
-      document.getElementById('celularResultado').innerText = "Celular: " + celular;
-      document.getElementById('fechaResultado').innerText = "Fecha: " + fecha;
-      document.getElementById('interes1Resultado').innerText = "Promociones: " + interes1;
-      document.getElementById('interes2Resultado').innerText = "Noticias: " + interes2;
-  
-    });
-  });
+    let nombreEvento = document.getElementById('nombre-evento').textContent;
+    let nombre = document.getElementById('nombre').value;
+    let apellido = document.getElementById('apellido').value;
+    let documento = document.getElementById('documento').value;
+    let email = document.getElementById('email').value;
+    let celular = document.getElementById('celular').value;
+    let fecha = document.getElementById('fecha').value;
+    let interes1 = document.getElementById('interes1').checked ? "Sí" : "No";
+    let interes2 = document.getElementById('interes2').checked ? "Sí" : "No";
 
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const btnCancelar = document.getElementById('btn-cancelar');
-    const btnInscribirme = document.getElementById('btn-inscribirme');
-    const errorAlert = document.getElementById('errorAlert');
-    const successAlert = document.getElementById('successAlert');
+    document.getElementById('nombreEventoResultado').innerText = 'Evento: ' + nombreEvento;
+    document.getElementById('nombreResultado').innerText = 'Nombre: ' + nombre;
+    document.getElementById('apellidoResultado').innerText = 'Apellido: ' + apellido;
+    document.getElementById('documentoResultado').innerText = 'Documento: ' + documento;
+    document.getElementById('emailResultado').innerText = 'Correo Electrónico: ' + email;
+    document.getElementById('celularResultado').innerText = 'Celular: ' + celular;
+    document.getElementById('fechaResultado').innerText = 'Fecha: ' + fecha;
+    document.getElementById('interes1Resultado').innerText = 'Promociones exclusivas: ' + interes1;
+    document.getElementById('interes2Resultado').innerText = 'Noticias y actualizaciones: ' + interes2;
 
-    function mostrarAlerta(alerta) {
-        alerta.style.display = 'block';
-        setTimeout(() => {
-            alerta.style.display = 'none';
-        }, 4000);
-    }
-
-    btnCancelar.addEventListener('click', () => {
-        mostrarAlerta(errorAlert);
-        successAlert.style.display = 'none';
-    });
-
-    btnInscribirme.addEventListener('click', (event) => {
-        event.preventDefault();
-        mostrarAlerta(successAlert);
-        errorAlert.style.display = 'none';
+    document.getElementById('successAlert').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('successAlert').style.display = 'none';
+    }, 4000);
     });
 });
